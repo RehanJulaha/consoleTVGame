@@ -51,7 +51,7 @@ android {
         kotlinCompilerExtensionVersion = "1.5.11"
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes += listOf("META-INF/*")
         }
@@ -70,7 +70,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
-    // WebRTC
+    // WebRTC - from Google Maven
     implementation("org.webrtc:google-webrtc:1.0.32006")
 
     // mDNS
