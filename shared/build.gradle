@@ -12,7 +12,7 @@ protobuf {
         artifact = 'com.google.protobuf:protoc:3.25.3'
     }
     plugins {
-        id 'javalite' {
+        javalite {
             artifact = 'com.google.protobuf:protoc-gen-javalite:3.25.3'
         }
     }
