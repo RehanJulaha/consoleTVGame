@@ -70,8 +70,8 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
-    // WebRTC - from JitPack
-    implementation("com.github.webrtc:webrtc:1.0.32006")
+    // WebRTC - using libjingle from Maven Central (public)
+    implementation("io.pristine:libjingle:11139@aar")
 
     // mDNS
     implementation("javax.jmdns:jmdns:3.5.6")
