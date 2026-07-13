@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package retro.network;
+
+option java_package = "com.retrogamestick.network";
+option java_multiple_files = true;
+
+message InputFrame {
+    uint32 player_slot = 1;
+    uint32 frame_id = 2;
+    uint64 timestamp_us = 3;
+    InputState state = 4;
+}
+
+message InputState {
+    uint32 buttons = 1;
+    int32 lx = 2;
+    int32 ly = 3;
+    int32 rx = 4;
+    int32 ry = 5;
+}
+
+message ControlMessage {
+    enum Type {
+        PAIR_REQUEST = 0;
+        PAIR_RESPONSE = 1;
+        GAME_LOAD = 2;
+        GAME_UNLOAD = 3;
+        SAVE_STATE = 4;
+        LOAD_STATE = 5;
+        PLAYER_ASSIGN = 6;
+        PING = 7;
+        PONG = 8;
+    }
+    Type type = 1;
+    bytes payload = 2;
+}
+
+message PairRequest {
+    string device_name = 1;
+    string device_id = 2;
+    int32 preferred_slot = 3; // -1 for auto
+}
+
+message PairResponse {
+    bool success = 1;
+    int32 assigned_slot = 2; // 0 or 1
+    string pin = 3;
+    string console_name = 4;
+}
+
+message GameLoad {
+    string core_name = 1;
+    string rom_path = 2;
+}
+
+message PlayerAssign {
+    int32 slot = 1;
+    string device_name = 2;
+}
