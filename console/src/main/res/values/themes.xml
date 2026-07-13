@@ -2,7 +2,7 @@
     <string name="app_name">RetroGameStick Console</string>
     <string name="app_name_short">RetroStick</string>
     
-    <style name="Theme.RetroGameStick" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.RetroGameStick" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/teal_200</item>
