@@ -61,6 +61,9 @@ android {
 }
 
 dependencies {
+    // Material Components for XML themes
+    implementation("com.google.android.material:material:1.11.0")
+
     // Compose (standard Material3 + Foundation)
     implementation("androidx.compose.material3:material3:1.2.0")
     implementation("androidx.compose.foundation:foundation:1.6.0")
