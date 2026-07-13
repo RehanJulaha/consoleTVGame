@@ -1,29 +1,10 @@
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
-    id 'com.google.protobuf' version '0.9.4'
 }
 
 group = 'retro.gamestick'
 version = '1.0.0'
-
-protobuf {
-    protoc {
-        artifact = 'com.google.protobuf:protoc:3.25.3'
-    }
-    plugins {
-        javalite {
-            artifact = 'com.google.protobuf:protoc-gen-javalite:3.25.3'
-        }
-    }
-    generateProtoTasks {
-        all().forEach {
-            it.plugins {
-                id 'javalite'
-            }
-        }
-    }
-}
 
 dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3'
