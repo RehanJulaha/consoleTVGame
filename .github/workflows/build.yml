@@ -34,12 +34,14 @@ jobs:
       - name: Create local.properties
         run: |
           echo "sdk.dir=${{ steps.android.outputs.sdk-path }}" > local.properties
+          echo "Sdk path: ${{ steps.android.outputs.sdk-path }}"
+          cat local.properties
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Build Console APK (Android TV)
-        run: ./gradlew :console:assembleDebug --no-daemon -x lint
+        run: ./gradlew :console:assembleDebug --no-daemon -x lint --info
 
       - name: Build Controller APK (Phone)
         run: ./gradlew :controller:assembleDebug --no-daemon -x lint
