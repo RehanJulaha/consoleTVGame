@@ -23,6 +23,12 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Install protoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y protobuf-compiler
+          protoc --version
+
       - name: Setup Android SDK
         id: android
         uses: android-actions/setup-android@v3
