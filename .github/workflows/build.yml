@@ -24,11 +24,16 @@ jobs:
           cache: gradle
 
       - name: Setup Android SDK
+        id: android
         uses: android-actions/setup-android@v3
         with:
           api-level: 34
           ndk-version: r26c
           emulator: false
+
+      - name: Create local.properties
+        run: |
+          echo "sdk.dir=${{ steps.android.outputs.sdk-path }}" > local.properties
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
