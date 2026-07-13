@@ -4,17 +4,7 @@
     android:height="180dp"
     android:viewportWidth="320"
     android:viewportHeight="180">
-    <rect
+    <path
         android:fillColor="#3700B3"
-        android:width="320"
-        android:height="180" />
-    <text
-        android:fontFamily="sans-serif-medium"
-        android:text="RetroGameStick"
-        android:textColor="#FFFFFF"
-        android:textSize="32sp"
-        android:x="160"
-        android:y="95"
-        android:gravity="center"
-        android:textAlignment="center" />
+        android:pathData="M0,0h320v180h-320z"/>
 </vector>
