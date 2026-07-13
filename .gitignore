@@ -1,0 +1,35 @@
+# Build outputs
+/build
+/.gradle
+/gradle/wrapper/gradle-wrapper.jar
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+
+# JDKs (downloaded locally)
+jdk-*/
+jdk-*/**
+
+# Gradle distributions
+gradle-*/
+gradle-*-bin.zip
+
+# Local properties
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.apk
+*.aab
+*.ap_
+*.aar
+
+# Logs
+*.log
