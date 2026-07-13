@@ -2,7 +2,6 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
-    id("com.google.protobuf")
 }
 
 android {
@@ -77,7 +76,7 @@ dependencies {
     // mDNS - using org.jmdns from Maven Central
     implementation("org.jmdns:jmdns:3.5.6")
 
-    // Protobuf
+    // Protobuf - using generated classes from shared module
     implementation(project(":shared"))
     implementation("com.google.protobuf:protobuf-javalite:3.25.3")
 
