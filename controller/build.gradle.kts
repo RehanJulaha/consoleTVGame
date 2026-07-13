@@ -73,8 +73,8 @@ dependencies {
     // WebRTC - using libjingle from Maven Central (public)
     implementation("io.pristine:libjingle:11139@aar")
 
-    // mDNS
-    implementation("javax.jmdns:jmdns:3.5.6")
+    // mDNS - using org.jmdns from Maven Central
+    implementation("org.jmdns:jmdns:3.5.6")
 
     // Protobuf
     implementation(project(":shared"))
