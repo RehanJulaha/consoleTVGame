@@ -71,8 +71,8 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
-    // WebRTC - using JitPack for google-webrtc
-    implementation("org.webrtc:google-webrtc:1.0.32006@aar")
+    // WebRTC - from Google Maven (google())
+    implementation("org.webrtc:google-webrtc:1.0.32006")
 
     // mDNS
     implementation("javax.jmdns:jmdns:3.5.6")
