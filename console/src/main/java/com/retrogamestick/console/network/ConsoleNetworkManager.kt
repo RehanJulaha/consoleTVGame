@@ -3,7 +3,7 @@ package com.retrogamestick.console.network
 import android.content.Context
 import android.util.Log
 import kotlinx.coroutines.CoroutineScope
-import retrofit.gamestick.network.InputFrame
+import retro.gamestick.network.InputFrame
 
 class ConsoleNetworkManager(
     private val context: Context,
