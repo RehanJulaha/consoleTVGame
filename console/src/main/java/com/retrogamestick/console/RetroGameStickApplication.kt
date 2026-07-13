@@ -1,13 +1,11 @@
 package com.retrogamestick.console
 
 import android.app.Application
-import timber.log.Timber
+import android.util.Log
 
 class RetroGameStickApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        if (BuildConfig.DEBUG) {
-            Timber.plant(Timber.DebugTree())
-        }
+        Log.d("RetroGameStick", "Application created")
     }
 }
