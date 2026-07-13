@@ -42,8 +42,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
-import retro.gamestick.network.InputFrame
-import retro.gamestick.network.InputState
+import retro.gamestick.network.NetworkInputFrame
+import retro.gamestick.network.NetworkInputState
 
 class MainActivity : ComponentActivity() {
     private val supervisorJob = SupervisorJob()
@@ -81,11 +81,11 @@ fun ControllerScreen() {
     LaunchedEffect(isConnected) {
         if (isConnected) {
             while (isConnected) {
-                val frame = InputFrame(
+                val frame = NetworkInputFrame(
                     playerSlot = myPlayerSlot,
                     frameId = 0,
                     timestampUs = System.currentTimeMillis() * 1000,
-                    state = InputState(
+                    state = NetworkInputState(
                         buttons = buildButtonBitmask(buttonsState.value),
                         lx = dPadX(dPadState.value),
                         ly = dPadY(dPadState.value),

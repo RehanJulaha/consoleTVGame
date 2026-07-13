@@ -1,13 +1,17 @@
 package retro.gamestick.network
 
-data class InputFrame(
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class NetworkInputFrame(
     val playerSlot: Int = 0,
     val frameId: Long = 0,
     val timestampUs: Long = 0,
-    val state: InputState = InputState()
+    val state: NetworkInputState = NetworkInputState()
 )
 
-data class InputState(
+@Serializable
+data class NetworkInputState(
     val buttons: Int = 0,
     val lx: Short = 0,
     val ly: Short = 0,
