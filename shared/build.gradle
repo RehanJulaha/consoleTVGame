@@ -16,13 +16,6 @@ protobuf {
             artifact = 'com.google.protobuf:protoc-gen-javalite:3.25.3'
         }
     }
-    generateProtoTasks {
-        all().forEach { task ->
-            task.plugins {
-                id 'javalite'
-            }
-        }
-    }
 }
 
 dependencies {
