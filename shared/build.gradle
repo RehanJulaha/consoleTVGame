@@ -12,13 +12,13 @@ protobuf {
         artifact = 'com.google.protobuf:protoc:3.25.3'
     }
     plugins {
-        javalite {
+        id 'javalite' {
             artifact = 'com.google.protobuf:protoc-gen-javalite:3.25.3'
         }
     }
     generateProtoTasks {
-        all().forEach {
-            it.plugins {
+        all().forEach { task ->
+            task.plugins {
                 id 'javalite'
             }
         }
