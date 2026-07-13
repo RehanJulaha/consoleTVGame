@@ -62,7 +62,7 @@ android {
 }
 
 dependencies {
-    // Compose (standard Material3 + Foundation - TV modules may not be in public repo yet)
+    // Compose (standard Material3 + Foundation)
     implementation("androidx.compose.material3:material3:1.2.0")
     implementation("androidx.compose.foundation:foundation:1.6.0")
     implementation("androidx.compose.ui:ui:1.6.0")
@@ -71,8 +71,8 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
 
-    // WebRTC - from Google Maven
-    implementation("org.webrtc:google-webrtc:1.0.32006")
+    // WebRTC - using JitPack for google-webrtc
+    implementation("org.webrtc:google-webrtc:1.0.32006@aar")
 
     // mDNS
     implementation("javax.jmdns:jmdns:3.5.6")
@@ -97,4 +97,10 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.0")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.0")
+}
+
+repositories {
+    google()
+    mavenCentral()
+    maven { url = uri("https://jitpack.io") }
 }
